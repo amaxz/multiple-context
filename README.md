@@ -1,5 +1,17 @@
 # README #
 
+In de root van het Saneium project om de jar in het platform project te krijgen voer het volgende command uit.
+
+
+
+```
+#!bash
+
+mvn clean compiler:compile install && ./startServer.sh
+```
+
+
+
 This README would normally document whatever steps are necessary to get your application up and running.
 
 ### What is this repository for? ###
