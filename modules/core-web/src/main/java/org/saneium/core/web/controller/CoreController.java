@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by mbollemeijer on 17/05/15.
  */
 
-@Controller("/core")
+@Controller
 public class CoreController {
 
     @RequestMapping("/")

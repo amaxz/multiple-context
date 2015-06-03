@@ -1,2 +1,2 @@
 org/saneium/core/web/controller/CoreController.class
-org/saneium/core/web/CoreConfig.class
+org/saneium/core/web/config/CoreConfig.class
