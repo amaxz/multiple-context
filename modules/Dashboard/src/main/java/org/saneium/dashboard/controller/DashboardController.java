@@ -12,6 +12,6 @@ public class DashboardController {
 
     @RequestMapping("/")
     public String dashBoardHome() {
-        return "dashboard";
+        return "dashboard/home";
     }
 }

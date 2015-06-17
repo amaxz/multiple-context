@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <packaging>jar</packaging>
-    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Saneium</groupId>
-    <artifactId>core-web</artifactId>
+    <modelVersion>4.0.0</modelVersion>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <groupId>Saneium</groupId>
+    <artifactId>webcore</artifactId>
 
     <properties>
         <boot.version>1.2.3.RELEASE</boot.version>
@@ -17,23 +17,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>Saneium</groupId>
-            <artifactId>webcore</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
             <version>${boot.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.1.6.RELEASE</version>
-        </dependency>
-
-
     </dependencies>
-
 </project>

@@ -1,53 +1,22 @@
 package org.saneium;
 
-import org.saneium.core.web.config.CoreConfig;
-import org.saneium.dashboard.config.DashboardConfig;
+import org.saneium.platform.modules.DynamicModuleRegister;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
-import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.stereotype.Controller;
+
 
 @Configuration
+@ComponentScan(excludeFilters = {@ComponentScan.Filter(value = Controller.class, type = FilterType.ANNOTATION)})
+@AutoConfigureAfter(DynamicModuleRegister.class)
 @EnableAutoConfiguration
-public class PlatformApplication   {
+public class PlatformApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PlatformApplication.class, args);
-    }
-
-    @Bean
-    public ServletRegistrationBean coreDispatcherServlet() {
-        DispatcherServlet dispatcherServlet = new DispatcherServlet();
-        AnnotationConfigEmbeddedWebApplicationContext applicationContext = new AnnotationConfigEmbeddedWebApplicationContext();
-        applicationContext.register(CoreConfig.class);
-        applicationContext.scan("org.saneium.core.web");
-        dispatcherServlet.setApplicationContext(applicationContext);
-
-
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(dispatcherServlet, "/core/*");
-        servletRegistrationBean.setName("core");
-        servletRegistrationBean.addUrlMappings("/core");
-        servletRegistrationBean.setAsyncSupported(true);
-
-        return servletRegistrationBean;
-    }
-
-    @Bean
-    public ServletRegistrationBean dashBoardDispatcherServlet() {
-        DispatcherServlet dispatcherServlet = new DispatcherServlet();
-
-        AnnotationConfigEmbeddedWebApplicationContext applicationContext = new AnnotationConfigEmbeddedWebApplicationContext();
-        applicationContext.register(DashboardConfig.class);
-        applicationContext.scan("org.saneium.dashboard");
-        dispatcherServlet.setApplicationContext(applicationContext);
-
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(dispatcherServlet, "/admin/*");
-        servletRegistrationBean.setName("admin");
-        servletRegistrationBean.addUrlMappings("/admin");
-        servletRegistrationBean.setAsyncSupported(true);
-        return servletRegistrationBean;
+        SpringApplication.run(new Class[] {DynamicModuleRegister.class, PlatformApplication.class}, args);
     }
 }

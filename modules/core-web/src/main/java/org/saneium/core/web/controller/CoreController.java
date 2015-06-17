@@ -12,6 +12,6 @@ public class CoreController {
 
     @RequestMapping("/")
     public String coreHome() {
-        return "coreHome";
+        return "core/home";
     }
 }
