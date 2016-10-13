@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>Saneium</groupId>
+            <groupId>org.saneium</groupId>
             <artifactId>webcore</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
