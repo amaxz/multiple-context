@@ -15,11 +15,11 @@
     </properties>
 
     <modules>
-        <module>config</module>
-        <module>platform</module>
         <module>modules/webcore</module>
         <module>modules/core-web</module>
         <module>modules/dashboard</module>
+        <module>config</module>
+        <module>platform</module>
     </modules>
 
     <!-- Build-->

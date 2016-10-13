@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <groupId>Saneium</groupId>
+    <groupId>org.saneium</groupId>
     <artifactId>webcore</artifactId>
 
     <properties>
         <boot.version>1.2.3.RELEASE</boot.version>
-        <main.basedir>${basedir}/../..</main.basedir>
+        <main.basedir>${pom.basedir}/../..</main.basedir>
         <java.version>1.8</java.version>
     </properties>
 

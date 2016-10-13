@@ -1,16 +1,18 @@
 package org.saneium.platform.modules;
 
-import org.saneium.web.core.servlet.AbstractWebModuleConfiguration;
-import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.embedded.ServletContextInitializer;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.util.Map;
 
+import org.saneium.web.core.servlet.AbstractWebModuleConfiguration;
+import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.ServletContextInitializer;
+
 /**
- * Created by mbollemeijer on 06/06/15.
+ * Class description
+ * @author mbollemeijer
+ * Created on 2016-10-13.
  */
 public class DynamicModuleRegister implements ServletContextInitializer {
 

@@ -5,19 +5,19 @@
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Saneium</groupId>
+    <groupId>org.saneium</groupId>
     <artifactId>core-web</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <boot.version>1.2.3.RELEASE</boot.version>
-        <main.basedir>${basedir}/../..</main.basedir>
+        <boot.version>1.4.0.RELEASE</boot.version>
+        <main.basedir>${pom.basedir}/../..</main.basedir>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>Saneium</groupId>
+            <groupId>org.saneium</groupId>
             <artifactId>webcore</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.1.6.RELEASE</version>
+            <version>4.3.2.RELEASE</version>
         </dependency>
 
 

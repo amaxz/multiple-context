@@ -6,7 +6,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 /**
- * Created by mbollemeijer on 05/06/15.
+ * Class description
+ * @author mbollemeijer
+ * Created on 2016-10-13.
  */
 
 @Component

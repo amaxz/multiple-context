@@ -1,4 +1,6 @@
 /**
- * Created by mbollemeijer on 02/06/15.
+ * Class description
+ * @author mbollemeijer
+ * Created on 2016-10-13.
  */
 package org.saneium.dashboard;

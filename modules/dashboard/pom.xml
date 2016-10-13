@@ -5,11 +5,11 @@
     <version>0.1</version>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Saneium</groupId>
+    <groupId>org.saneium</groupId>
     <artifactId>dashboard</artifactId>
     <properties>
-        <boot.version>1.2.3.RELEASE</boot.version>
-        <main.basedir>${basedir}/../..</main.basedir>
+        <boot.version>1.4.0.RELEASE</boot.version>
+        <main.basedir>${pom.basedir}/../..</main.basedir>
         <java.version>1.8</java.version>
     </properties>
 
